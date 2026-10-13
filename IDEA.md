@@ -101,6 +101,5 @@ After evaluating the ideas, the selected project focuses on Fix It, Money Reques
 
 Brainstorming board link: 
 
-Alternatively, include a screenshot of the board in the project repository, for example:
 
 "docs/brainstorming-ma
