@@ -99,8 +99,8 @@ The brainstorming phase considered different ideas for improving university resi
 
 After evaluating the ideas, the selected project focuses on Fix It, Money Request, and Skills Exchange.
 
-Brainstorming board link: [Insert the link to the team's brainstorming board here]
+Brainstorming board link: 
 
 Alternatively, include a screenshot of the board in the project repository, for example:
 
-"docs/brainstorming-map.png"
+"docs/brainstorming-ma
