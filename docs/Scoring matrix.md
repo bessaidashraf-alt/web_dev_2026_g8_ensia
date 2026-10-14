@@ -13,7 +13,7 @@ Each criterion is scored from 1 to 5.
 | Food Services | 5 | 5 | 3 | yes | 13 |
 | Tool Sharing | 4 | 5 | 4 | probably | 13 |
 | Lost and Found | 4 | 5 | 3 | few | 12 |
-| Second-Hand Market | 4 | 4 | 4 | yes | 12 |
+| Second-Hand Market | 4 | 4 | 4 | No | 12 |
 
 
 
