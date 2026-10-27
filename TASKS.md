@@ -1,4 +1,4 @@
-# Team G8 -- Task Plan (Lab 2)
+# Team Unipedia -- Task Plan (Lab 2)
 
 Project: **Unipedia** -- University Residence Services Platform (Fix It, Money Request, Skills Exchange)
 
@@ -6,11 +6,11 @@ Project: **Unipedia** -- University Residence Services Platform (Fix It, Money R
 
 | Member | GitHub username | Role |
 |--------|-----------------|------|
-| Member 1 | @user1 | Coordinator, template, home, authentication pages |
-| Member 2 | @user2 | Student dashboard and Fix It (student) |
-| Member 3 | @user3 | Fix It details and Staff pages |
-| Member 4 | @user4 | Money Request and Admin dashboard |
-| Member 5 | @user5 | Skills Exchange and Admin users |
+| Abdullah Kotbi | @abdullahKtbi | Home, authentication and student dashboard pages |
+| Chaima Chakrar | @chaimachakrar | Fix It (student) pages |
+| Malak Ghedjati | @malakghedjati123 | Template, Fix It (staff) and admin pages |
+| Achraf Bessaid Arslane | @bessaidashraf-alt | Money Request pages |
+| Meriem Zaidi | @meriemzaidi00 | Skills Exchange pages |
 
 ## Profiles
 
@@ -36,39 +36,40 @@ Project: **Unipedia** -- University Residence Services Platform (Fix It, Money R
 
 | Page | File | Profile | Owner | Reviewer | Status |
 |------|------|---------|-------|----------|--------|
-| Template | template.html | all | @user1 | @user2 | To do |
-| Home | index.html | all | @user1 | @user2 | To do |
-| Login (form) | login.html | all | @user1 | @user2 | To do |
-| Sign up (form) | signup.html | all | @user1 | @user2 | To do |
-| Student dashboard | dashboard.html | student | @user2 | @user3 | To do |
-| Fix It: new report (form) | fixit-new.html | student | @user2 | @user3 | To do |
-| Fix It: my reports (table) | fixit-reports.html | student | @user2 | @user3 | To do |
-| Fix It: report details | fixit-details.html | student | @user3 | @user4 | To do |
-| Staff: maintenance queue (table) | staff-queue.html | staff | @user3 | @user4 | To do |
-| Staff: report details and status update (form) | staff-report-details.html | staff | @user3 | @user4 | To do |
-| Money: requests (table) | money-requests.html | student | @user4 | @user5 | To do |
-| Money: new request (form) | money-new.html | student | @user4 | @user5 | To do |
-| Money: request details | money-details.html | student | @user4 | @user5 | To do |
-| Admin: dashboard | admin-dashboard.html | admin | @user4 | @user5 | To do |
-| Skills: browse | skills.html | student | @user5 | @user1 | To do |
-| Skills: new listing (form) | skill-new.html | student | @user5 | @user1 | To do |
-| Skills: exchange requests (table) | skill-requests.html | student | @user5 | @user1 | To do |
-| Admin: users (table) | admin-users.html | admin | @user5 | @user1 | To do |
+| Home | index.html | all | @abdullahKtbi | @bessaidashraf-alt | To do |
+| Login (form) | login.html | all | @abdullahKtbi | @bessaidashraf-alt | To do |
+| Sign up (form) | signup.html | all | @abdullahKtbi | @bessaidashraf-alt | To do |
+| Student dashboard | dashboard.html | student | @abdullahKtbi | @bessaidashraf-alt | To do |
+| Fix It: new report (form) | fixit-new.html | student | @chaimachakrar | @malakghedjati123 | To do |
+| Fix It: my reports (table) | fixit-reports.html | student | @chaimachakrar | @malakghedjati123 | To do |
+| Fix It: report details | fixit-details.html | student | @chaimachakrar | @malakghedjati123 | To do |
+| Template | template.html | all | @malakghedjati123 | @chaimachakrar | To do |
+| Staff: maintenance queue (table) | staff-queue.html | staff | @malakghedjati123 | @chaimachakrar | To do |
+| Staff: report details and status update (form) | staff-report-details.html | staff | @malakghedjati123 | @chaimachakrar | To do |
+| Admin: dashboard | admin-dashboard.html | admin | @malakghedjati123 | @chaimachakrar | To do |
+| Admin: users (table) | admin-users.html | admin | @malakghedjati123 | @chaimachakrar | To do |
+| Money: requests (table) | money-requests.html | student | @bessaidashraf-alt | @meriemzaidi00 | To do |
+| Money: new request (form) | money-new.html | student | @bessaidashraf-alt | @meriemzaidi00 | To do |
+| Money: request details | money-details.html | student | @bessaidashraf-alt | @meriemzaidi00 | To do |
+| Skills: new listing (form) | skill-new.html | student | @meriemzaidi00 | @abdullahKtbi | To do |
+| Skills: browse | skills.html | student | @meriemzaidi00 | @abdullahKtbi | To do |
+| Skills: exchange requests (table) | skill-requests.html | student | @meriemzaidi00 | @abdullahKtbi | To do |
+
 
 Status values: To do , In progress , In review , Done (#PR number).
 
 ## Deadlines
 
-- Template pushed: DD/MM/2026
-- All pages merged: DD/MM/2026
-- Tag `lab2-team` on the final commit: DD/MM/2026
+- Template pushed: 27/10/2026
+- All pages merged: 27/10/2026
+- Tag `lab2-team` on the final commit: 28/10/2026
 
 ## Confirmation
 
 Each member confirms their assignment by ticking their name:
 
-- [ ] Member 1
-- [ ] Member 2
-- [ ] Member 3
-- [ ] Member 4
-- [ ] Member 5
+- [ ] Abdullah Kotbi
+- [ ] Chaima Chakrar
+- [ ] Malak Ghedjati
+- [ ] Achraf Bessaid Arslane
+- [ ] Meriem Zaidi
