@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff: maintenance queue - Unipedia</title>
+</head>
+
+<body>
+  <header>
+    <h1>Unipedia</h1>
+    <nav>
+      <ul>
+      <li><a href="staff-queue.html">Maintenance queue</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="login.html">Log out</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Maintenance queue</h2>
+    <p>Reports from students in your residence.</p>
+
+    <p>New: 2 | Under review: 2 | In progress: 1 | Resolved this week: 1</p>
+
+    <form>
+      <input type="search" placeholder="Search by number or title...">
+      <select>
+        <option>Status: All</option>
+        <option>New</option>
+        <option>Under review</option>
+        <option>In progress</option>
+        <option>Resolved</option>
+      </select>
+      <select>
+        <option>Category: All</option>
+        <option>Plumbing</option>
+        <option>Electrical</option>
+        <option>Appliances</option>
+      </select>
+      <select>
+        <option>Urgency: All</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+      <button type="submit">Filter</button>
+    </form>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Category</th>
+          <th>Urgency</th>
+          <th>Submitted</th>
+          <th>Status</th>
+          <th>Last update</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>R-1044</td>
+          <td>Water heater makes noise</td>
+          <td>B - 214</td>
+          <td>Appliances</td>
+          <td>Low</td>
+          <td>Oct 25</td>
+          <td>New</td>
+          <td>-</td>
+          <td><a href="staff-report-details.html">Open</a></td>
+        </tr>
+        <tr>
+          <td>R-1043</td>
+          <td>No hot water on 3rd floor</td>
+          <td>A - 3rd fl.</td>
+          <td>Plumbing</td>
+          <td>High</td>
+          <td>Oct 25</td>
+          <td>New</td>
+          <td>-</td>
+          <td><a href="staff-report-details.html">Open</a></td>
+        </tr>
+        <tr>
+          <td>R-1042</td>
+          <td>Leaking tap in bathroom</td>
+          <td>B - 214</td>
+          <td>Plumbing</td>
+          <td>High</td>
+          <td>Oct 23</td>
+          <td>In progress</td>
+          <td>Oct 24</td>
+          <td><a href="staff-report-details.html">Open</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Unipedia</p>
+  </footer>
+</body>
+
+</html>
