@@ -1,0 +1,81 @@
+/* =========================================================
+   Unipedia | About page
+   File: indexPage/about/about.css
+
+   Only styles used by the About page live here.
+   Colours, buttons, cards, sections, header and footer come
+   from ../../shared/base.css (linked first in about.html).
+   ========================================================= */
+
+/* ---------- PAGE HEAD ---------- */
+.page-head { padding: 56px 0 24px; }
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.breadcrumb li + li::before { content: "›"; margin-right: 8px; }
+.breadcrumb a { text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb__current { font-weight: 600; color: var(--text); }
+
+.page-head h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.page-head__lead {
+  margin-top: 12px;
+  max-width: 62ch;
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+/* Tighten the gap between the page head and the first section */
+.page-head + .section { padding-top: 32px; }
+
+/* ---------- GRIDS ---------- */
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+/* ---------- ROLE CARDS ---------- */
+.role__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.role__head h3 { font-size: 18px; font-weight: 700; }
+.role__head .badge { margin-left: auto; }
+
+/* ---------- "DOES NOT" LIST ---------- */
+.checklist--no .icon { color: var(--text-muted); }
+
+/* ---------- CALL TO ACTION ---------- */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  background: var(--navy);
+  color: var(--white);
+}
+.cta h2 { font-size: 24px; font-weight: 800; }
+.cta p { margin-top: 6px; color: rgba(255, 255, 255, 0.75); }
+.cta__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.cta :focus-visible { outline-color: var(--aqua); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 520px) {
+  .page-head { padding: 36px 0 16px; }
+  .cta { padding: 24px; }
+  .cta__actions .btn { width: 100%; }
+}
