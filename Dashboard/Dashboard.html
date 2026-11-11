@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Money Request - Unipedia</title>
+
+    <link rel="stylesheet" href="css/money-requests.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Unipedia</h2>
+            <p>University Residence Services</p>
+        </div>
+
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Fix It</a>
+            <a href="#" class="active">Money Request</a>
+            <a href="#">Exchange Skills</a>
+            <a href="#">Profile</a>
+            <a href="#">Log out</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <div class="user-info">
+
+                <div class="avatar">U</div>
+
+                <div class="user-details">
+                    <strong>User Name</strong>
+                    <small>Student</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE HEADING -->
+        <div class="page-heading">
+
+            <div>
+                <h1>Money Request</h1>
+
+                <p>
+                    Request or offer cash assistance to fellow students.
+                </p>
+            </div>
+
+            <button class="announce-btn" id="announceBtn" type="button">
+                + Announce an ATM trip
+            </button>
+
+        </div>
+
+
+        <!-- TABS -->
+        <div class="tabs">
+
+            <button class="tab active" type="button">
+                Available trips
+            </button>
+
+            <button class="tab" type="button">
+                My requests
+            </button>
+
+            <button class="tab" type="button">
+                Received requests
+            </button>
+
+        </div>
+
+
+        <!-- PAGE CONTENT -->
+        <div class="content-layout">
+
+            <!-- AVAILABLE TRIPS -->
+            <section class="trips-list" id="tripsList">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">↗</div>
+
+                    <h3>No available trips yet</h3>
+
+                    <p>
+                        When students announce ATM trips,
+                        they will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- MY REQUESTS PANEL -->
+            <aside class="requests-panel">
+
+                <h2>My Requests</h2>
+
+                <div id="myRequests">
+
+                    <div class="empty-state small-empty">
+
+                        <div class="empty-icon">○</div>
+
+                        <p>
+                            You haven't sent any requests yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="notice">
+
+                    <strong>Important reminder</strong>
+
+                    <p>
+                        Remember to confirm your transaction
+                        after receiving the cash.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- ANNOUNCE ATM TRIP MODAL -->
+    <div class="modal-overlay" id="tripModal" hidden>
+
+        <div class="trip-modal">
+
+            <!-- MODAL HEADER -->
+            <div class="modal-header">
+
+                <div>
+                    <h2>Announce an ATM Trip</h2>
+
+                    <p>
+                        Share your trip details with other students.
+                    </p>
+                </div>
+
+                <button
+                    class="close-modal"
+                    id="closeModal"
+                    type="button">
+                    &times;
+                </button>
+
+            </div>
+
+
+            <!-- TRIP FORM -->
+            <form id="tripForm">
+
+                <!-- ATM LOCATION -->
+                <div class="form-group">
+
+                    <label for="atmLocation">
+                        ATM Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="atmLocation"
+                        placeholder="Enter ATM location"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DATE AND TIME -->
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="tripDate">
+                            Trip Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="tripDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="departureTime">
+                            Departure Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="departureTime"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- AVAILABLE AMOUNT -->
+                <div class="form-group">
+
+                    <label for="availableAmount">
+                        Available Amount (DZD)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="availableAmount"
+                        placeholder="Enter available amount"
+                        min="1"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- ADDITIONAL NOTES -->
+                <div class="form-group">
+
+                    <label for="tripNotes">
+                        Additional Notes (Optional)
+                    </label>
+
+                    <textarea
+                        id="tripNotes"
+                        rows="4"
+                        placeholder="Write any additional information..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- FORM BUTTONS -->
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        id="cancelModal">
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="publish-btn">
+                        Publish Trip
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,339 @@
+/* =========================
+1. General Settings
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F2F7F4;
+    color: #2D5652;
+    line-height: 1.6;
+}
+
+
+/* =========================
+2. Main Container
+========================= */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+
+/* =========================
+3. Header
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2D5652;
+}
+
+.page-label {
+    color: #97AFA5;
+    font-size: 14px;
+}
+
+
+/* =========================
+4. Main Title
+========================= */
+
+.subtitle {
+    color: #47736A;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+h1 {
+    color: #2D5652;
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.description {
+    color: #829B90;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+5. Steps Grid
+========================= */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================
+6. Individual Step
+========================= */
+
+.step {
+    background: #FFFFFF;
+    border: 1px solid #D9E8DF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(45, 86, 82, 0.04);
+}
+
+
+/* =========================
+7. Step Header
+========================= */
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+8. Step Number
+========================= */
+
+.number {
+    background: #E4F2EA;
+    color: #2D5652;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================
+9. Student Role
+========================= */
+
+.role {
+    font-size: 11px;
+    color: #829B90;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/* =========================
+10. Step Title
+========================= */
+
+h2 {
+    font-size: 17px;
+    color: #2D5652;
+}
+
+
+/* =========================
+11. Step Description
+========================= */
+
+.step p {
+    font-size: 14px;
+    color: #56736A;
+}
+
+
+/* =========================
+12. Status Labels
+========================= */
+
+.status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 10px;
+
+    border-radius: 20px;
+    background: #E4F2EA;
+    color: #47736A;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================
+13. Step Colors
+========================= */
+
+/* Accepted */
+
+.accepted .number {
+    background: #D6EFDF;
+    color: #2D5652;
+}
+
+/* Transfer */
+
+.transfer .number {
+    background: #F5E9D2;
+    color: #967039;
+}
+
+/* Confirmed */
+
+.confirmed .number {
+    background: #D6EFDF;
+    color: #2D5652;
+}
+
+/* Final */
+
+.final .number {
+    background: #97D3CD;
+    color: #234B45;
+}
+
+
+/* =========================
+14. Privacy & Cancellation
+========================= */
+
+/* Information Section */
+
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+
+/* Information Cards */
+
+.info-box {
+    background: #FFFFFF;
+    border: 1px solid #D9E8DF;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+
+/* Information Title */
+
+.info-box h3 {
+    font-size: 14px;
+    color: #2D5652;
+    margin-bottom: 5px;
+}
+
+
+/* Information Description */
+
+.info-box p {
+    font-size: 13px;
+    color: #829B90;
+}
+
+
+/* =========================
+15. Status Flow
+========================= */
+
+.status-flow {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #829B90;
+}
+
+.status-flow span {
+    display: inline-block;
+    background: #E4F2EA;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+
+/* =========================
+16. Footer
+========================= */
+
+.page-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #D9E8DF;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #97AFA5;
+    font-size: 12px;
+}
+
+
+/* =========================
+17. Tablet Screens
+========================= */
+
+@media (max-width: 800px) {
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =========================
+18. Mobile Screens
+========================= */
+
+@media (max-width: 550px) {
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .page-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
+
+
+
+
