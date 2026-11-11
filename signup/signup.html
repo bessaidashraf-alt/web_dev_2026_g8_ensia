@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a student account on Unipedia.">
+  <title>Sign Up | Unipedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/base.css">
+  <link rel="stylesheet" href="../shared/auth.css">
+  <!-- signUp.css omitted since shared/auth.css handles all auth layout -->
+  <script src="../shared/base.js" defer></script>
+  <script src="../shared/auth.js" defer></script>
+</head>
+<body>
+  <!-- Shared Icon Sprite -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <!-- Auth specific icons -->
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="../indexPage/index.html" aria-label="Unipedia home">
+        <svg class="icon logo__icon"><use href="#i-home"/></svg>
+        <span class="logo__text">
+          <span class="logo__name">Unipedia</span>
+          <span class="logo__tagline">Your Residence, All in One Place</span>
+        </span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <a href="../indexPage/index.html#services">Services</a>
+        <a href="../indexPage/index.html#how-it-works">How it works</a>
+        <a href="../indexPage/about/about.html">About</a>
+        <a class="main-nav__mobile-only" href="../login/login.html">Sign in</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost-light" href="../login/login.html">Sign in</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+        <svg class="icon icon-open"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="auth-main">
+    <div class="card auth-card">
+      <div class="auth-header">
+        <h2>Create student account</h2>
+        <p>Join Unipedia with your university email.</p>
+      </div>
+      
+      <form action="../dashboard/dashboard.html" method="GET">
+        <div class="form-group">
+          <label class="form-label" for="fullName">Full Name</label>
+          <input class="form-control" type="text" id="fullName" name="fullName" placeholder="e.g. Ahmed Benali" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="email">University Email</label>
+          <input class="form-control" type="email" id="email" name="email" placeholder="student@ensia.edu.dz" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <div class="password-input-wrap">
+            <input class="form-control" type="password" id="password" name="password" placeholder="Create a strong password" required>
+            <button type="button" class="password-toggle" aria-label="Show password">
+              <svg class="icon"><use href="#i-eye"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-actions">
+          <button type="submit" class="btn btn-primary btn-lg">Create account</button>
+        </div>
+      </form>
+      
+      <div class="auth-footer">
+        Already have an account? <a href="../signIn/signIn.html">Sign in</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

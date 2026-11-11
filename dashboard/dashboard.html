@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Unipedia student dashboard for Fix It reports, ATM money requests, and skills exchange.">
+  <title>Student Dashboard | Unipedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/base.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="../shared/base.js" defer></script>
+</head>
+<body>
+  <!-- Icon sprite -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Structural wrapper for CSS Grid layout -->
+  <div class="app-shell">
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="main-nav" aria-label="Student Navigation">
+      <a class="logo" href="dashboard.html" aria-label="Unipedia home">
+        <svg class="icon logo__icon"><use href="#i-home"/></svg>
+        <span class="logo__text">
+          <span class="logo__name">Unipedia</span>
+          <span class="logo__tagline">Your Residence, All in One Place</span>
+        </span>
+      </a>
+
+      <nav class="sidebar__nav" aria-label="Main modules">
+        <a class="sidebar__link" href="dashboard.html" aria-current="page">
+          <svg class="icon"><use href="#i-grid"/></svg>
+          Dashboard
+        </a>
+        <a class="sidebar__link" href="fixit-reports.html">
+          <svg class="icon"><use href="#i-wrench"/></svg>
+          Fix It
+        </a>
+        <a class="sidebar__link" href="money-requests.html">
+          <svg class="icon"><use href="#i-wallet"/></svg>
+          Money Request
+        </a>
+        <a class="sidebar__link" href="skills.html">
+          <svg class="icon"><use href="#i-repeat"/></svg>
+          Skills Exchange
+        </a>
+      </nav>
+
+      <nav class="sidebar__bottom" aria-label="User settings">
+        <a class="sidebar__link" href="#profile">
+          <svg class="icon"><use href="#i-user"/></svg>
+          Profile
+        </a>
+        <a class="sidebar__link" href="../signIn/signIn.html">
+          <svg class="icon"><use href="#i-logout"/></svg>
+          Log out
+        </a>
+      </nav>
+    </aside>
+
+    <!-- ============ MAIN WORKSPACE ============ -->
+    <div class="app-body">
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar__left">
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+            <svg class="icon icon-open"><use href="#i-menu"/></svg>
+            <svg class="icon icon-close"><use href="#i-close"/></svg>
+          </button>
+          
+          <!-- Semantic form for search -->
+          <form class="search-box" role="search" action="#" method="GET">
+            <svg class="icon"><use href="#i-search"/></svg>
+            <input type="search" placeholder="Search reports, ATM trips, or skills..." aria-label="Search Unipedia">
+          </form>
+        </div>
+
+        <a class="user-pill" href="#profile" aria-label="mohammed mohammed profile">
+          <span class="avatar">AB</span>
+          <span class="user-pill__info">
+            <span class="user-pill__name">mohammed mohammed</span>
+            <span class="user-pill__role">Student &middot; Block B</span>
+          </span>
+        </a>
+      </header>
+
+      <!-- Dashboard Content -->
+      <main id="main" class="dash-main">
+        <!-- Welcome & Quick Actions -->
+        <section class="dash-welcome" aria-label="Welcome">
+          <header>
+            <span class="badge badge--aqua">Block B &middot; Room 204</span>
+            <h1>Welcome to Unipedia, <span>mohammed</span></h1>
+            <p>Your dashboard is currently clear. Choose an action to get started.</p>
+          </header>
+          <nav class="quick-actions" aria-label="Quick actions">
+            <a class="btn btn-primary" href="fixit-new.html">
+              <svg class="icon"><use href="#i-plus"/></svg>
+              Report issue
+            </a>
+            <a class="btn btn-outline" href="money-new.html">
+              <svg class="icon"><use href="#i-wallet"/></svg>
+              Announce ATM trip
+            </a>
+            <a class="btn btn-outline" href="skill-new.html">
+              <svg class="icon"><use href="#i-repeat"/></svg>
+              Post a skill
+            </a>
+          </nav>
+        </section>
+
+        <!-- Summary KPI Cards -->
+        <section class="stats-grid" aria-label="Service overview">
+          <article class="card stat-card">
+            <span class="service__icon"><svg class="icon"><use href="#i-wrench"/></svg></span>
+            <div class="stat-card__body">
+              <p class="stat-card__label">Fix It Reports</p>
+              <p class="stat-card__value">0 Active</p>
+              <div class="stat-card__meta">
+                <span class="badge badge--mint">All clear</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card stat-card">
+            <span class="service__icon"><svg class="icon"><use href="#i-wallet"/></svg></span>
+            <div class="stat-card__body">
+              <p class="stat-card__label">Money Requests</p>
+              <p class="stat-card__value">0 DA</p>
+              <div class="stat-card__meta">
+                <span>No pending requests</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card stat-card">
+            <span class="service__icon"><svg class="icon"><use href="#i-repeat"/></svg></span>
+            <div class="stat-card__body">
+              <p class="stat-card__label">Skills Exchange</p>
+              <p class="stat-card__value">0 Sessions</p>
+              <div class="stat-card__meta">
+                <span>No upcoming exchanges</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- Two-Column Workspace (Structural Grid) -->
+        <div class="dash-columns">
+          <div class="dash-stack">
+            <!-- Empty Fix It Card -->
+            <article class="card">
+              <header class="card__row">
+                <hgroup>
+                  <h2 class="card__title">My Fix It Reports</h2>
+                  <p class="card__sub">Track maintenance problems in your room.</p>
+                </hgroup>
+              </header>
+              <div class="empty-state">
+                <svg class="icon"><use href="#i-wrench"/></svg>
+                <p>You haven't reported any maintenance issues yet.</p>
+              </div>
+            </article>
+
+            <!-- Empty Skills Exchange Card -->
+            <article class="card">
+              <header class="card__row">
+                <hgroup>
+                  <h2 class="card__title">Skills Exchange</h2>
+                  <p class="card__sub">Your active Teach &amp; Learn sessions.</p>
+                </hgroup>
+              </header>
+              <div class="empty-state">
+                <svg class="icon"><use href="#i-repeat"/></svg>
+                <p>You aren't participating in any skill exchanges right now.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="dash-stack">
+            <!-- Empty Money Request Card -->
+            <article class="card">
+              <header class="card__row">
+                <hgroup>
+                  <h2 class="card__title">Money Requests</h2>
+                  <p class="card__sub">Manage your ATM trips and cash requests.</p>
+                </hgroup>
+              </header>
+              <div class="empty-state">
+                <svg class="icon"><use href="#i-wallet"/></svg>
+                <p>No active ATM trips or money requests found.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Safety Banners -->
+        <section class="banners" aria-label="Privacy and safety reminders">
+          <aside class="banner banner--warning">
+            <svg class="icon"><use href="#i-info"/></svg>
+            <p><strong>Unipedia only tracks requests.</strong> Payments happen outside Unipedia. Never share passwords, PINs or card codes.</p>
+          </aside>
+          <aside class="banner banner--info">
+            <svg class="icon"><use href="#i-lock"/></svg>
+            <p><strong>Your CCP number stays hidden.</strong> It is shown only to the student whose money request you accept.</p>
+          </aside>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
