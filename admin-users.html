@@ -1,26 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page title - Unipedia</title>
+  <title>Users - Unipedia</title>
 </head>
+
 <body>
   <header>
     <h1>Unipedia</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign up</a>
+      <ul>
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href=" admin-users.html">Users</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="login.html">Log out</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Page content goes here</h2>
+    <h2>Users</h2>
+    <p>Manage accounts, roles and access</p>
+    <p><a href="admin-users.html">Create staff account</a></p>
+
+    <form>
+      <input type="search" placeholder="Search by name or email...">
+      <select>
+        <option>Role: All</option>
+        <option>Student</option>
+        <option>Staff</option>
+        <option>Admin</option>
+      </select>
+      <select>
+        <option>Status: All</option>
+        <option>Active</option>
+        <option>Disabled</option>
+      </select>
+      <button type="submit">Filter</button>
+    </form>
+
+    <section>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Joined</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Meriem Saadi</td>
+            <td>meriem.saadi@univ.dz</td>
+            <td>Student</td>
+            <td>Active</td>
+            <td>Today</td>
+          </tr>
+          <tr>
+            <td>Rafik Bouzid</td>
+            <td>rafik.b@univ.dz</td>
+            <td>Student</td>
+            <td>Active</td>
+            <td>Yesterday</td>
+          </tr>
+          <tr>
+            <td>Nadia Cherif</td>
+            <td>n.cherif@residence.dz</td>
+            <td>Staff</td>
+            <td>Active</td>
+            <td>Oct 20</td>
+          </tr>
+          <tr>
+            <td>Hamza Larbi</td>
+            <td>h.larbi@univ.dz</td>
+            <td>Student</td>
+            <td>Disabled</td>
+            <td>Oct 18</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Unipedia</p>
   </footer>
 </body>
+
 </html>

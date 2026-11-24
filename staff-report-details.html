@@ -1,26 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page title - Unipedia</title>
+  <title>Report details - Unipedia</title>
 </head>
+
 <body>
   <header>
     <h1>Unipedia</h1>
+    <p>Fix It administration</p>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign up</a>
+      <ul>
+        <li><a href="staff-queue.html">Maintenance queue</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="login.html">Log out</a></li>
+      </ul>
     </nav>
   </header>
-
   <main>
-    <h2>Page content goes here</h2>
-  </main>
+    <p><a href="staff-queue.html">Maintenance queue</a> &gt; R-1042</p>
 
-  <footer>
-    <p>&copy; 2026 Unipedia</p>
-  </footer>
+    <h2>Leaking tap in bathroom</h2>
+    <p>Report R-1042 | Ahmed Benali | Block B, Room 214</p>
+    <p>Urgency: <strong>High</strong> | Status: <strong id="current-status">In progress</strong></p>
+
+    <section>
+      <h3>Student's report</h3>
+      <dl>
+        <dt>Category</dt>
+        <dd>Plumbing</dd>
+        <dt>Description</dt>
+        <dd>The tap in the bathroom drips all day and water pools on the floor. It started three days ago.</dd>
+        <dt>Appointment</dt>
+        <dd>Oct 26, 2026, 10:00 - 11:00 (booked by the student)</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h3>Update this report</h3>
+      <p>The student sees the note you write here.</p>
+      <form>
+        <label for="status">New status</label>
+        <select id="status" name="status">
+          <option>New</option>
+          <option>Under review</option>
+          <option selected>In progress</option>
+          <option>Waiting for student</option>
+          <option>Resolved</option>
+        </select>
+
+        <label for="slot">Appointment slot</label>
+        <input type="datetime-local" id="slot" name="slot">
+
+        <label for="note">Note for the student</label>
+        <textarea id="note" name="note" rows="4"
+          placeholder="Write what was done or what you need from the student..."></textarea>
+
+        <button type="submit">Save update</button>
+        <button type="button">Return to student</button>
+        <button type="button">Mark as resolved</button>
+      </form>
+    </section>
+
+    <section>
+      <h3>History</h3>
+      <ol id="history">
+        <li><strong>In progress</strong> - plumber scheduled (Oct 24, 09:10, Nadia Cherif)</li>
+        <li><strong>Under review</strong> (Oct 23, 10:40, Nadia Cherif)</li>
+        <li><strong>New</strong> (Oct 23, 08:15, Ahmed Benali)</li>
+      </ol>
+    </section>
+  </main>
 </body>
-</html>
