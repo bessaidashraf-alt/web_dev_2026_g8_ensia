@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill profile | Unipedia</title>
+  <link rel="stylesheet" href="../css/skills-exchange.css">
+</head>
+<body>
+  <header>
+    <a href="../dashboard.html">Unipedia</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="../dashboard.html">Dashboard</a></li>
+        <li><a href="../fix-it/report-list.html">Fix It</a></li>
+        <li><a href="../money-request/overview.html">Money Request</a></li>
+        <li><a href="browse-skills.html" aria-current="page">Skills Exchange</a></li>
+        <li><a href="../notifications.html">Notifications</a></li>
+        <li><a href="../profile.html">Profile</a></li>
+        <li><a href="../sign-in.html">Sign out</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav aria-label="Skills Exchange sections">
+    <ul>
+      <li><a href="browse-skills.html">Browse skills</a></li>
+      <li><a href="my-skills.html">My skills</a></li>
+      <li><a href="exchange-requests.html">Requests</a></li>
+    </ul>
+  </nav>
+  <main>
+    <p><a href="browse-skills.html">Back to browse</a></p>
+
+    <section aria-labelledby="profile-name">
+      <h1 id="profile-name">Amina K.</h1>
+      <p>Computer science student. Happy to share what I know.</p>
+      <p>Only the details Amina chose to make public are shown here.</p>
+    </section>
+
+    <section aria-labelledby="listings-heading">
+      <h2 id="listings-heading">Active listings</h2>
+
+      <article>
+        <h3>Python for beginners</h3>
+        <p><strong>Teach</strong> · Technology · Beginner</p>
+        <p>I can help you write your first scripts and understand loops and functions.</p>
+        <p>General availability: Evenings, weekends</p>
+
+        <details>
+          <summary>Send an exchange request</summary>
+          <form action="exchange-requests.html" method="post">
+            <input type="hidden" name="listing_id" value="1">
+
+            <label for="message">Message (required)</label>
+            <textarea id="message" name="message" rows="4" maxlength="500" required
+              placeholder="Say what you want to learn or share and why."></textarea>
+
+            <label for="availability">Your availability (optional)</label>
+            <input type="text" id="availability" name="availability" placeholder="e.g. Tuesday after 5 pm">
+
+            <button type="submit">Send request</button>
+          </form>
+        </details>
+      </article>
+
+      <article>
+        <h3>Learn Spanish basics</h3>
+        <p><strong>Learn</strong> · Languages · Beginner</p>
+        <p>Looking for a practice partner once a week.</p>
+        <p>General availability: Weekends</p>
+        <a href="#">Send an exchange request</a>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>Unipedia records requests and sessions. Share only what you are comfortable sharing, and meet in public places.</p>
+    <a href="../help.html">Help</a> <a href="../privacy.html">Privacy</a>
+  </footer>
+  <script src="../js/skills-exchange.js"></script>
+</body>
+</html>
