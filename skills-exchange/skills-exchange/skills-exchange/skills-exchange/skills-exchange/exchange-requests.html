@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exchange requests | Unipedia</title>
+  <link rel="stylesheet" href="../css/skills-exchange.css">
+</head>
+<body>
+  <header>
+    <a href="../dashboard.html">Unipedia</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="../dashboard.html">Dashboard</a></li>
+        <li><a href="../fix-it/report-list.html">Fix It</a></li>
+        <li><a href="../money-request/overview.html">Money Request</a></li>
+        <li><a href="browse-skills.html" aria-current="page">Skills Exchange</a></li>
+        <li><a href="../notifications.html">Notifications</a></li>
+        <li><a href="../profile.html">Profile</a></li>
+        <li><a href="../sign-in.html">Sign out</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav aria-label="Skills Exchange sections">
+    <ul>
+      <li><a href="browse-skills.html">Browse skills</a></li>
+      <li><a href="my-skills.html">My skills</a></li>
+      <li><a href="exchange-requests.html">Requests</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Exchange requests</h1>
+
+    <nav aria-label="Request direction">
+      <a href="#received">Received</a>
+      <a href="#sent">Sent</a>
+    </nav>
+
+    <section id="received" aria-labelledby="received-heading">
+      <h2 id="received-heading">Received</h2>
+
+      <article>
+        <h3>Python for beginners</h3>
+        <p>From Yacine B. · Status: <strong>Pending</strong></p>
+        <p>Hi! I would love to learn the basics before my programming module starts.</p>
+        <p>Availability: Tuesday after 5 pm</p>
+        <form action="exchange-requests.html" method="post">
+          <input type="hidden" name="request_id" value="10">
+          <button type="submit" name="action" value="accept">Accept</button>
+          <button type="submit" name="action" value="reject">Reject</button>
+        </form>
+      </article>
+
+      <article>
+        <h3>Python for beginners</h3>
+        <p>From Sara T. · Status: <strong>Accepted</strong></p>
+        <p>Thanks for helping with my first project.</p>
+        <a href="schedule-session.html?request=11">Schedule session</a>
+      </article>
+    </section>
+
+    <section id="sent" aria-labelledby="sent-heading">
+      <h2 id="sent-heading">Sent</h2>
+
+      <article>
+        <h3>Conversational French</h3>
+        <p>To Lina M. · Status: <strong>Scheduled</strong></p>
+        <p>Session: Saturday 14:00, Main library, ground floor café</p>
+        <form action="exchange-requests.html" method="post">
+          <input type="hidden" name="request_id" value="12">
+          <button type="submit" name="action" value="cancel">Cancel session</button>
+        </form>
+      </article>
+
+      <article>
+        <h3>Guitar lessons</h3>
+        <p>To Omar R. · Status: <strong>Pending</strong></p>
+        <form action="exchange-requests.html" method="post">
+          <input type="hidden" name="request_id" value="13">
+          <button type="submit" name="action" value="cancel">Cancel request</button>
+        </form>
+      </article>
+
+      <article>
+        <h3>Chess basics</h3>
+        <p>To Nadia S. · Status: <strong>Rejected</strong></p>
+      </article>
+    </section>
+
+    <!-- Empty state -->
+    <section aria-label="No requests">
+      <h2>No requests yet</h2>
+      <p>When you send or receive a request, it appears here.</p>
+      <a href="browse-skills.html">Browse skills</a>
+    </section>
+  </main>
+  <footer>
+    <p>Unipedia records requests and sessions. Share only what you are comfortable sharing, and meet in public places.</p>
+    <a href="../help.html">Help</a> <a href="../privacy.html">Privacy</a>
+  </footer>
+  <script src="../js/skills-exchange.js"></script>
+</body>
+</html>
