@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schedule session | Unipedia</title>
+  <link rel="stylesheet" href="../css/skills-exchange.css">
+</head>
+<body>
+  <header>
+    <a href="../dashboard.html">Unipedia</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="../dashboard.html">Dashboard</a></li>
+        <li><a href="../fix-it/report-list.html">Fix It</a></li>
+        <li><a href="../money-request/overview.html">Money Request</a></li>
+        <li><a href="browse-skills.html" aria-current="page">Skills Exchange</a></li>
+        <li><a href="../notifications.html">Notifications</a></li>
+        <li><a href="../profile.html">Profile</a></li>
+        <li><a href="../sign-in.html">Sign out</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav aria-label="Skills Exchange sections">
+    <ul>
+      <li><a href="browse-skills.html">Browse skills</a></li>
+      <li><a href="my-skills.html">My skills</a></li>
+      <li><a href="exchange-requests.html">Requests</a></li>
+    </ul>
+  </nav>
+  <main>
+    <p><a href="exchange-requests.html">Back to requests</a></p>
+    <h1>Schedule a session</h1>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Accepted exchange</h2>
+      <dl>
+        <dt>Skill</dt><dd>Python for beginners</dd>
+        <dt>With</dt><dd>Sara T.</dd>
+        <dt>Status</dt><dd>Accepted</dd>
+      </dl>
+    </section>
+
+    <form action="exchange-requests.html" method="post">
+      <input type="hidden" name="request_id" value="11">
+
+      <label for="session-date">Date (required)</label>
+      <input type="date" id="session-date" name="date" required>
+
+      <label for="start-time">Start time (required)</label>
+      <input type="time" id="start-time" name="start_time" required>
+
+      <label for="end-time">End time (required)</label>
+      <input type="time" id="end-time" name="end_time" required>
+
+      <fieldset>
+        <legend>Meeting mode (required)</legend>
+        <input type="radio" id="mode-campus" name="mode" value="campus" required>
+        <label for="mode-campus">On campus</label>
+        <input type="radio" id="mode-online" name="mode" value="online">
+        <label for="mode-online">Online</label>
+      </fieldset>
+
+      <label for="details">Meeting details (required)</label>
+      <textarea id="details" name="details" rows="3" required
+        placeholder="e.g. Main library, ground floor café, or a video call link"></textarea>
+      <p>Choose a public campus place or an online meeting. Avoid sharing room numbers.</p>
+
+      <button type="submit">Confirm session</button>
+      <a href="exchange-requests.html">Cancel</a>
+    </form>
+  </main>
+  <footer>
+    <p>Unipedia records requests and sessions. Share only what you are comfortable sharing, and meet in public places.</p>
+    <a href="../help.html">Help</a> <a href="../privacy.html">Privacy</a>
+  </footer>
+  <script src="../js/skills-exchange.js"></script>
+</body>
+</html>
