@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse skills | Unipedia</title>
+  <link rel="stylesheet" href="../css/skills-exchange.css">
+</head>
+<body>
+  <header>
+    <a href="../dashboard.html">Unipedia</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="../dashboard.html">Dashboard</a></li>
+        <li><a href="../fix-it/report-list.html">Fix It</a></li>
+        <li><a href="../money-request/overview.html">Money Request</a></li>
+        <li><a href="browse-skills.html" aria-current="page">Skills Exchange</a></li>
+        <li><a href="../notifications.html">Notifications</a></li>
+        <li><a href="../profile.html">Profile</a></li>
+        <li><a href="../sign-in.html">Sign out</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav aria-label="Skills Exchange sections">
+    <ul>
+      <li><a href="browse-skills.html">Browse skills</a></li>
+      <li><a href="my-skills.html">My skills</a></li>
+      <li><a href="exchange-requests.html">Requests</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Browse skills</h1>
+    <p>Find students who want to teach or learn a skill.</p>
+
+    <form action="browse-skills.html" method="get" role="search">
+      <label for="q">Search skills</label>
+      <input type="search" id="q" name="q" placeholder="e.g. Python, guitar, French">
+
+      <label for="type">Type</label>
+      <select id="type" name="type">
+        <option value="">All</option>
+        <option value="teach">Teach</option>
+        <option value="learn">Learn</option>
+      </select>
+
+      <label for="category">Category</label>
+      <select id="category" name="category">
+        <option value="">All categories</option>
+        <option>Academic</option>
+        <option>Languages</option>
+        <option>Music</option>
+        <option>Technology</option>
+        <option>Sports</option>
+        <option>Life skills</option>
+        <option>Other</option>
+      </select>
+
+      <button type="submit">Search</button>
+      <a href="browse-skills.html">Clear filters</a>
+    </form>
+
+    <p>Showing 3 active listings</p>
+
+    <section aria-label="Skill listings">
+      <article>
+        <h2><a href="skill-profile.html">Python for beginners</a></h2>
+        <p><strong>Teach</strong> · Technology · Beginner</p>
+        <p>I can help you write your first scripts and understand loops and functions.</p>
+        <p>Offered by <a href="skill-profile.html">Amina K.</a> · Evenings, weekends</p>
+        <a href="skill-profile.html">View listing</a>
+      </article>
+      <article>
+        <h2><a href="skill-profile.html">Learn acoustic guitar</a></h2>
+        <p><strong>Learn</strong> · Music · Beginner</p>
+        <p>Looking for someone to teach me basic chords and strumming patterns.</p>
+        <p>Requested by <a href="skill-profile.html">Yacine B.</a> · Weekday afternoons</p>
+        <a href="skill-profile.html">View listing</a>
+      </article>
+      <article>
+        <h2><a href="skill-profile.html">Conversational French</a></h2>
+        <p><strong>Teach</strong> · Languages · Intermediate</p>
+        <p>Weekly speaking practice, relaxed and informal.</p>
+        <p>Offered by <a href="skill-profile.html">Lina M.</a> · Weekends</p>
+        <a href="skill-profile.html">View listing</a>
+      </article>
+    </section>
+
+    <!-- Empty state (shown when no listing matches) -->
+    <section aria-label="No results">
+      <h2>No listings match your search</h2>
+      <p>Try different words or clear the filters, or publish your own listing.</p>
+      <a href="listing-form.html">Create a listing</a>
+    </section>
+
+    <nav aria-label="Pagination">
+      <a href="#">Previous</a> <span>Page 1 of 1</span> <a href="#">Next</a>
+    </nav>
+  </main>
+  <footer>
+    <p>Unipedia records requests and sessions. Share only what you are comfortable sharing, and meet in public places.</p>
+    <a href="../help.html">Help</a> <a href="../privacy.html">Privacy</a>
+  </footer>
+  <script src="../js/skills-exchange.js"></script>
+</body>
+</html>
