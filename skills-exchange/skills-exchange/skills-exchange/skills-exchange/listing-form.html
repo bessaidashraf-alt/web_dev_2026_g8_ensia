@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create or edit listing | Unipedia</title>
+  <link rel="stylesheet" href="../css/skills-exchange.css">
+</head>
+<body>
+  <header>
+    <a href="../dashboard.html">Unipedia</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="../dashboard.html">Dashboard</a></li>
+        <li><a href="../fix-it/report-list.html">Fix It</a></li>
+        <li><a href="../money-request/overview.html">Money Request</a></li>
+        <li><a href="browse-skills.html" aria-current="page">Skills Exchange</a></li>
+        <li><a href="../notifications.html">Notifications</a></li>
+        <li><a href="../profile.html">Profile</a></li>
+        <li><a href="../sign-in.html">Sign out</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav aria-label="Skills Exchange sections">
+    <ul>
+      <li><a href="browse-skills.html">Browse skills</a></li>
+      <li><a href="my-skills.html">My skills</a></li>
+      <li><a href="exchange-requests.html">Requests</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Create a listing</h1>
+    <!-- When editing, change the heading to "Edit listing" and pre-fill the fields -->
+
+    <form action="my-skills.html" method="post">
+      <fieldset>
+        <legend>Listing type (required)</legend>
+        <input type="radio" id="type-teach" name="type" value="teach" required>
+        <label for="type-teach">Teach: I can help others</label>
+        <input type="radio" id="type-learn" name="type" value="learn">
+        <label for="type-learn">Learn: I want to be taught</label>
+      </fieldset>
+
+      <label for="skill-name">Skill name (required)</label>
+      <input type="text" id="skill-name" name="skill_name" maxlength="80" required placeholder="e.g. Python for beginners">
+
+      <label for="category">Category</label>
+      <select id="category" name="category">
+        <option value="">Choose a category</option>
+        <option>Academic</option>
+        <option>Languages</option>
+        <option>Music</option>
+        <option>Technology</option>
+        <option>Sports</option>
+        <option>Life skills</option>
+        <option>Other</option>
+      </select>
+
+      <label for="level">Level</label>
+      <select id="level" name="level">
+        <option value="">Any level</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+
+      <label for="description">Description (recommended)</label>
+      <textarea id="description" name="description" rows="5" maxlength="600"
+        placeholder="What will you teach or learn? What should the other student know?"></textarea>
+
+      <label for="availability">General availability</label>
+      <input type="text" id="availability" name="availability" placeholder="e.g. Evenings, weekends">
+      <p>Do not include your room number, phone number or email here. This listing is public.</p>
+
+      <button type="submit">Publish listing</button>
+      <a href="my-skills.html">Cancel</a>
+    </form>
+  </main>
+  <footer>
+    <p>Unipedia records requests and sessions. Share only what you are comfortable sharing, and meet in public places.</p>
+    <a href="../help.html">Help</a> <a href="../privacy.html">Privacy</a>
+  </footer>
+  <script src="../js/skills-exchange.js"></script>
+</body>
+</html>
