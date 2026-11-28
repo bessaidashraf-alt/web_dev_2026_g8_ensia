@@ -1,1 +1,310 @@
-/* Skills Exchange styles */
+:root {
+  --ink: #1f2933;
+  --muted: #52606d;
+  --page: #f4f6f3;
+  --surface: #ffffff;
+  --line: #d3d9d0;
+  --brand: #1d5c63;
+  --brand-dark: #14464c;
+  --accent: #e9b44c;
+  --danger: #a63d2f;
+  --ok: #2f6b3f;
+  --radius: 8px;
+}
+
+/* 2. Base */
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--page);
+}
+
+main {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+h1 { font-size: 1.9rem; margin: 0 0 0.5rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.75rem; }
+h3 { font-size: 1.1rem; margin: 0 0 0.25rem; }
+
+a { color: var(--brand); }
+a:hover { color: var(--brand-dark); }
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* 3. Header and menus */
+header {
+  background: var(--brand);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+
+header > a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+header nav a {
+  color: #e6f0f1;
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+  color: #fff;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Second menu (Browse / My skills / Requests) */
+header + nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 0.5rem 1rem;
+}
+
+header + nav a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+}
+
+header + nav a:hover { background: var(--page); }
+
+header + nav a[aria-current="page"] {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* 4. Content: cards, sections, lists */
+article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 0 0 1rem;
+}
+
+article p { margin: 0.25rem 0; }
+article h2, article h3 { margin-top: 0; }
+article h2 a { text-decoration: none; }
+
+section[aria-label="No results"],
+section[aria-label="No listings yet"],
+section[aria-label="No requests"] {
+  background: var(--surface);
+  border: 2px dashed var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+section[aria-label="No results"] h2,
+section[aria-label="No listings yet"] h2,
+section[aria-label="No requests"] h2 { margin-top: 0; }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+
+dt { font-weight: 600; }
+dd { margin: 0; }
+
+details {
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+nav[aria-label="Pagination"],
+nav[aria-label="Request direction"] {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* 5. Forms and buttons */
+form { max-width: 34rem; }
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 1rem 0 0.25rem;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #9aa5a0;
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+}
+
+fieldset {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 1rem 0 0;
+  padding: 0.5rem 1rem 0.75rem;
+}
+
+legend { font-weight: 600; padding: 0 0.4rem; }
+
+fieldset label {
+  display: inline;
+  font-weight: 400;
+  margin: 0 1rem 0 0.25rem;
+}
+
+input[type="radio"] { accent-color: var(--brand); }
+
+form p { color: var(--muted); font-size: 0.9rem; margin: 0.4rem 0 0; }
+
+small { display: block; color: var(--muted); text-align: right; }
+
+button {
+  font: inherit;
+  font-weight: 600;
+  margin: 1rem 0.75rem 0 0;
+  padding: 0.55rem 1.1rem;
+  background: var(--brand);
+  color: #fff;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button:hover { background: var(--brand-dark); }
+
+button[value="reject"],
+button[value="cancel"],
+button[value="deactivate"] {
+  background: #fff;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+button[value="reject"]:hover,
+button[value="cancel"]:hover,
+button[value="deactivate"]:hover { background: #fbeceb; }
+
+/* 6. Table (My skills) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  margin-top: 1rem;
+}
+
+caption { text-align: left; font-weight: 600; padding: 0.5rem 0; }
+
+th, td {
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+thead th { background: #e9eee8; }
+
+td form { display: inline; }
+td button { margin: 0 0 0 0.5rem; padding: 0.3rem 0.7rem; }
+
+/* 7. Status labels and messages (always text, never color alone) */
+[data-status] {
+  display: inline-block;
+  padding: 0.05rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+[data-status="pending"]   { color: #8a5a00; background: #fff5dc; }
+[data-status="accepted"],
+[data-status="scheduled"],
+[data-status="active"]    { color: var(--ok); background: #e8f3ea; }
+[data-status="rejected"],
+[data-status="cancelled"] { color: var(--danger); background: #fbeceb; }
+[data-status="inactive"],
+[data-status="completed"] { color: var(--muted); background: #eef0ee; }
+
+.message {
+  max-width: 34rem;
+  margin: 1rem 0 0;
+  padding: 0.6rem 0.9rem;
+  border-left: 4px solid var(--brand);
+  background: #e6f0f1;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.message[data-type="error"] {
+  border-left-color: var(--danger);
+  background: #fbeceb;
+  color: #6f241b;
+}
+
+/* 8. Footer */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer a { margin: 0 0.5rem; }
+
+/* 9. Small screens */
+@media (max-width: 640px) {
+  h1 { font-size: 1.5rem; }
+  dl { grid-template-columns: 1fr; }
+  table { display: block; overflow-x: auto; }
+  button { width: 100%; margin-right: 0; }
+  td button { width: auto; }
+}/* Skills Exchange styles */
